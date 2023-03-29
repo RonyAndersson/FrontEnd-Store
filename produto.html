@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <met http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo"  src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacao">
+        <a class="navegacao__enlace navegacao__enlace--ativo" href="index.html">Loja</a>
+        <a class="navegacao__enlace" href="sobreNos.html">Sobre Nós</a>
+    </nav>
+
+    <main class="container">
+        <h1>ReactJS</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagem" src="img/3.jpg" alt="imagem do produto">
+
+            <div class="camisa__conteudo">
+                <p>Donec quam nunc, condimentum eu erat ac, iaculis rhoncus lacus. Suspendisse non magna augue. M
+                    auris congue semper rutrum. Suspendisse molestie ante vitae aliquam volutpat.</p>
+
+                    <form class="formulario">
+                        
+                        <select class="formulario__campo">
+                            <option disabled selected>--Selecionar Tamanho--</option>
+                            <option>P</option>
+                            <option>M</option>
+                            <option>G</option>
+                        </select>
+                        
+                        <input class="formulario__campo"  type="number" placeholder="Quantidade" min="1">
+                        <input class="formulario__submit"  type="submit" value="Adicionar ao Carrinho">
+
+                    </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - &copy; 2023 Todos os Direitos Reservados</p>
+    </footer>
+</body>
+</html>

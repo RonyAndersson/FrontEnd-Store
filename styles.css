@@ -1,0 +1,262 @@
+:root{
+    --primario:#0F0E0E;
+    --primarioOscuro:#8B9A46;
+    --secundario:#FFEA20;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco:#fff;
+    --negro:#000;
+
+    --fuentePrincipal:'Staatliches', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62%;
+}
+    *, *:before, *:after{
+        box-sizing: inherit;
+}
+
+/*Globais*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 120rem;
+    margin:0 auto;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;    
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/*Header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+/*Navegaçao*/
+.navegacao{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /*gap: 2rem; separacion forma nueva*/
+
+}
+
+.navegacao__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.navegacao__enlace:last-of-type{
+    margin-right: 0;
+}
+.navegacao__enlace--ativo,
+.navegacao__enlace:hover{
+    color: var(--secundario);
+}
+
+/*Footer*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin: 2rem;
+}
+
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
+/*Grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*Produtos*/
+.produto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+
+}
+
+.produto__nome{
+    font-size: 4rem;
+
+}
+
+.produto__preco{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.produto__nome,
+.produto__preco{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*Graficos*/
+
+.grafico{
+    min-height: 30rem;
+    background-repeat: none;
+    background-size: cover;
+    grid-column:1 / 3;
+
+}
+
+.grafico--camisas{
+    grid-row: 2 / 3;
+    background-image:url(../FrontEndStore_inicio/img/grafico1.jpg);
+}
+
+.grafico--node{
+    background-image:url(../FrontEndStore_inicio/img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px){
+
+.grafico--node{
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+    }
+}
+
+/*Sobre Nos*/
+.sobrenos{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .sobrenos{
+        
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.sobrenos__img{
+    grid-row: 1 / 2;
+    
+}
+
+@media (min-width: 768px ) {
+    .sobrenos__img{
+        grid-column: 2 / 3;
+    }
+    
+}
+
+/**Blocos**/
+
+.blocos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .blocos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+.bloco{
+    text-align: center;
+}
+
+.bloco__titulo{
+    margin: 0;
+}
+
+/*Pagina do produto*/
+@media (min-width:768px ) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap:2rem;
+    }      
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario__campo{
+    border: .5rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
